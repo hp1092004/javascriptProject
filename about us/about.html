@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reviews and Why Choose Us</title>
+   <!-- Add Google Fonts import -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Ubuntu', sans-serif;
+         margin: 0;
+         padding: 0;
+      }
+
+      .dark-mode {
+         background-color: rgba(0, 0, 0, 0.9);
+         color: white;
+      }
+
+      .light-mode {
+         background-color: white;
+         color: black; /* Set the text color for light mode */
+      }
+
+      body.light-mode * {
+         color: black; /* Set text color for all elements in light mode */
+      }
+
+      .navbar {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         position: sticky;
+         top: 0;
+         background-color: rgba(0, 0, 0, 0.7);
+         padding: 15px 50px;
+         transition: background-color 0.3s ease;
+      }
+
+      .nav-list {
+         display: flex;
+         align-items: center;
+      }
+
+      .nav-list li {
+         list-style: none;
+         margin-right: 20px;
+      }
+
+      .nav-list li a {
+         text-decoration: none;
+         font-size: 18px;
+         font-weight: bold;
+         transition: color 0.3s ease;
+      }
+
+      .nav-list li a:hover {
+         color: #c5c2c2;
+      }
+
+      .box-container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         margin: 20px 0;
+      }
+
+      .box {
+         background-color: #ffffff;
+         padding: 30px;
+         margin: 20px;
+         border-radius: 12px;
+         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         color: black; /* Set the text color for boxes */
+      }
+
+      .box h3,
+      .box p {
+         color: black; /* Set the text color for +10k, Online Courses, etc. */
+      }
+
+      .reviews .box p {
+         min-height: 120px;
+      }
+
+      .footer {
+         background-color: #222;
+         color: white;
+         text-align: center;
+         padding: 20px 0;
+      }
+
+      #toggleBtn {
+         background: none;
+         border: none;
+         font-size: 24px;
+         cursor: pointer;
+         color: white;
+      }
+   </style>
+</head>
+
+<body class="dark-mode">
+
+   <nav class="navbar">
+      <ul class="nav-list">
+         <li><a href="file:///C:/xampp/htdocs/javascriptProject/index.html">Home</a></li>
+         <li><a href="#aboutus">About</a></li>
+         <li><a href="#rviews">Reviews</a></li>
+      </ul>
+      <button id="toggleBtn" onclick="toggleMode()">☾</button>
+   </nav>
+
+   <section class="why-choose-us">
+
+      <div class="row">
+
+         <div class="image">
+            <!-- Replace the following line with your image source from the "about us" section -->
+            <img src="images/aboutusimage.png" alt="Why Choose Us Image" height="400px" style="max-width: 100%; margin-left:20px;">
+         </div>
+
+         <div class="content" style="margin-left:20px" id="aboutus">
+           <h3 style="margin:20px 20px 20px 5px">Why Choose Us?</h3>
+          <p>Discover the reasons to choose our education platform. We provide a unique learning experience with expert
+               tutors, a wide range of online courses, and a track record of successful job placements.
+   At our platform, we are committed to fostering an environment that encourages curiosity, critical thinking, and innovation. Our expert tutors are dedicated to helping students reach their full potential by providing personalized guidance and support.
+  With over a decade of experience in the education industry, we take pride in our ability to adapt to the ever-evolving landscape of learning. Our online courses cover a diverse range of subjects, ensuring that students can find the right path to achieve their academic and professional goals.
+   Join us on this educational journey and experience a community that values excellence, collaboration, and continuous growth. Your success is our priority, and we look forward to being a part of your educational success story.</p>
+         </div>
+
+      </div>
+
+      <div class="box-container">
+
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+               <h3>+10k</h3>
+               <p>Online Courses</p>
+            </div>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-user-graduate"></i>
+            <div>
+               <h3>+40k</h3>
+               <p>Brilliant Students</p>
+            </div>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-chalkboard-user"></i>
+            <div>
+               <h3>+2k</h3>
+               <p>Expert Tutors</p>
+            </div>
+         </div>
+
+         <div class="box">
+            <i class="fas fa-briefcase"></i>
+            <div>
+               <h3>100%</h3>
+               <p>Job Placement</p>
+            </div>
+         </div>
+
+      </div>
+
+   </section>
+
+   <section class="reviews" id="rviews">
+
+      <a name="rview"><h1 class="heading" style="margin-left:20px">Student's Reviews</h1></a>
+
+      <div class="box-container">
+
+         <div class="box">
+            <p>I am truly grateful for the valuable
+               knowledge and skills I gained here. The support from the tutors is exceptional, and the interactive
+               learning environment made my journey enjoyable. Highly recommended!</p>
+            <div class="student">
+               <img src="images/pic-2.jpg" alt="Radhika Gupta">
+               <div>
+                  <h3>Radhika Gupta</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="box">
+            <p>Exceptional learning environment! The diverse courses and engaging teaching methods have truly expanded
+               my knowledge. The platform's commitment to excellence is evident, and I'm proud to be part of this
+               community. Thank you for the amazing journey!</p>
+            <div class="student">
+               <img src="images/pic-3.jpg" alt="Aman Bansal">
+               <div>
+                  <h3>Aman Bansal</h3>
+                  <div class="stars">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star-half-alt"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Add more review boxes as needed -->
+
+      </div>
+
+   </section>
+
+   <footer class="footer">
+      <p>Copyright © 2024 - www.LearnHub.com - All rights reserved</p>
+   </footer>
+
+   <script>
+      function toggleMode() {
+         let element = document.body;
+         if (element.classList.contains("dark-mode")) {
+            element.className = "light-mode";
+         } else {
+            element.className = "dark-mode";
+         }
+      }
+   </script>
+
+</body>
+
+</html>

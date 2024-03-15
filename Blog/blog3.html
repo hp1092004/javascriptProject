@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gates and Their Real-World Applications</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Logic Gates and Their Real-World Applications</h1>
+    </header>
+
+    <main>
+        <!-- Your Logic Gates Blog Content Goes Here -->
+
+        <section id="and-gate">
+            <h2>1. AND Gate: Enhancing Security Systems</h2>
+            <p>Truth Table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Scenario: Imagine a highly secure research facility with restricted access areas.</p>
+            <p>Application: AND gates are deployed at access points, requiring both an authorized access card (Input A) and a correct PIN code (Input B) for entry.</p>
+            <p>Benefits: This application ensures stringent security, allowing entry only to authorized personnel with both a valid card and PIN.</p>
+        </section>
+
+        <section id="or-gate">
+            <h2>2. OR Gate: Doorbell System</h2>
+            <p>Truth Table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Scenario: You have a house with two entrances – a front door and a back door.</p>
+            <p>Application: An OR gate is used to manage the doorbell system. When someone presses either the front doorbell button (Input A) or the back doorbell button (Input B), the OR gate combines these inputs.</p>
+            <p>Benefits: This setup ensures that anyone approaching from either the front or back door can easily notify the occupants inside.</p>
+        </section>
+
+        <!-- Repeat the above structure for other sections -->
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This case study underscores the diverse real-world applications of logic gates, demonstrating their pivotal role in modern technology.</p>
+        </section>
+
+        <section id="not-gate">
+            <h2>3. NOT Gate: Temperature Control System</h2>
+            <p>Truth Table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Scenario: Picture a climate control system for a server room.</p>
+            <p>Application: NOT gates are employed to ensure the cooling system operates only when the temperature exceeds a certain threshold (Input A = 1). When the temperature is below the threshold (Input A = 0), the NOT gate inverts the signal.</p>
+            <p>Benefits: This application prevents unnecessary energy consumption and maintains the server room at an optimal temperature.</p>
+        </section>
+
+        <section id="nand-gate">
+            <h2>4. NAND Gate: Device Failure Alarm</h2>
+            <p>Truth Table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Input C</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Scenario: In an industrial setting with multiple exhaust fans.</p>
+            <p>Application: NAND gates monitor the status of exhaust fans. When all fans are operational, the NAND gate output remains low. If any fan stops working, the gate output goes high, triggering an alarm.</p>
+            <p>Benefits: This application promptly alerts maintenance personnel to fan failures, preventing overheating and equipment damage.</p>
+        </section>
+
+        <section id="nor-gate">
+            <h2>5. NOR Gate: Washing Machine Controller</h2>
+            <p>Truth Table:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Input C</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Scenario: A modern washing machine with various sensors.</p>
+            <p>Application: A Washing Machine has three sensors to check for the washing machine lid open, washing tub filled to a minimum level, and the weight of clothes and water in the tub.</p>
+            <p>Benefits: This application safeguards the washing machine and ensures proper operation.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This case study underscores the diverse real-world applications of logic gates, demonstrating their pivotal role in modern technology.</p>
+        </section>
+
+    </main>
+</body>
+
+</html>

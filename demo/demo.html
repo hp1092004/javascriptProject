@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+    <style>
+        .dark-mode {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+
+        .light-mode {
+            background-color: white;
+            color: black; /* Set the text color for light mode */
+        }
+
+        body.light-mode * {
+            color: black; /* Set text color for all elements in light mode */
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            padding: 10px 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: 'Ubuntu', sans-serif;
+            padding: 26px 30px;
+        }
+
+        nav a:hover {
+            color: rgb(197, 194, 194);
+        }
+
+        h1, h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        p {
+            padding: 0px 65px;
+        }
+
+        video, audio {
+            width: 70%;
+            margin-top: 20px;
+            display: block;
+            margin: auto;
+        }
+
+        center {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #toggleBtn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Add styles for burger menu icon */
+        .burger {
+            display: none; /* Initially hide the burger menu icon */
+            cursor: pointer;
+        }
+
+        /* Media query for screens with max-width: 668px */
+        @media only screen and (max-width: 668px) {
+            nav {
+                flex-direction: column; /* Change flex direction to stack items vertically */
+                align-items: center; /* Align items to the center of the container */
+                padding-bottom: 20px; /* Add some spacing at the bottom */
+            }
+            
+            .burger {
+                display: block; /* Display the burger menu icon */
+                margin-top: 10px; /* Add some spacing at the top */
+                align-self: flex-end; /* Position the menu button at the end when menu is not active */
+            }
+
+            nav div {
+                display: none; /* Hide the navigation links by default */
+            }
+
+            /* Show navigation links when burger menu icon is clicked */
+            nav.active div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding-left: 0; /* Remove default padding for list */
+            }
+
+          
+        }
+    </style>
+</head>
+<body class="dark-mode" onload="showWelcomeMessage()">
+    <nav>
+        <div>
+            <a href="#overview">Overview</a>
+            <a href="#types">Types of Communication</a>
+            <a href="#benefits">Benefits</a>
+        </div>
+        <button id="toggleBtn" class="burger" onclick="toggleMenu()">☰</button> <!-- Change the burger menu icon to '☰' -->
+    </nav>
+
+    <h1>Communication Skills</h1>
+    <img src="C:\xampp\htdocs\javascriptProject\demo\images\Picture1.png" height="240px" width="320px" alt="Communication">
+
+    <hr>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>Effective communication is the cornerstone of successful interactions in both personal and professional settings. It involves the exchange of ideas, information, and emotions between individuals or groups. In today's interconnected world, the ability to communicate effectively is more crucial than ever, transcending barriers and fostering understanding.</p>
+    </section>
+
+    <section id="types">
+        <h2>Types of Communication</h2>
+        <p>Communication takes various forms, including verbal, non-verbal, written, and visual. Verbal communication involves spoken or written words, while non-verbal communication encompasses body language, gestures, and facial expressions. Written communication utilizes written words, and visual communication utilizes images, graphs, and charts to convey information.</p>
+    </section>
+
+    <section id="benefits">
+        <h2>Benefits of Effective Communication</h2>
+        <p>The advantages of effective communication are numerous. It enhances relationships, promotes teamwork, and reduces misunderstandings. In professional settings, clear communication leads to increased productivity and better decision-making. It is a key factor in resolving conflicts and building a positive organizational culture.</p>
+    </section>
+
+    <center>
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+        </video>
+    </center>
+
+    <center>
+        <h2><a href="file:///C:/xampp/htdocs/javascriptProject/Blog/blog4.html">Click for more information on Communication</a></h2>
+    </center>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active'); // Toggle the 'active' class on the navigation menu
+        }
+        
+        function toggleMode() {
+            let element = document.body;
+            if (element.classList.contains("dark-mode")) {
+                element.className = "light-mode";
+            } else {
+                element.className = "dark-mode";
+            }
+        }
+        
+        function showWelcomeMessage() {
+            alert("Welcome to our Communication Skills Demo Website! Explore and enhance your communication skills.");
+        }
+    </script>
+</body>
+</html>

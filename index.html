@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="responsive.css">
+<style>
+.invalid{
+ border: 5px solid blue; /* Increase the border thickness */
+ border-radius: 4px; /* Add border-radius for a rounded appearance */
+}
+</style>
+    <title>LearnHub - Transforming Online Education</title>
+</head>
+
+<body>
+    <nav class="navbar background h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo">
+	<img src="img/img.jpg" alt="logo">
+	</div>
+            <li><a href="#">Home</a></li>
+            <li><a href="C:\xampp\htdocs\javascriptProject\about us\about.html">About</a></li>
+            <li><a href="C:\xampp\htdocs\javascriptProject\Blog\blog.html">Blogs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Unlock the Power of Knowledge Anywhere, Anytime</p>
+                <p class="text-small">In a world with endless possibilities, LearnHub brings education to your fingertips. Explore the future of learning with us and take a step towards a brighter, educateEd tomorrow.</p>
+                <div class="buttons">
+                    <a class="btn" onclick="window.location.href='http://localhost/javascriptProject/Signup/index.php'">Subscribe</a>
+                    <a href="C:\xampp\htdocs\javascriptProject\demo\demo.html"><button class="btn">Watch Video</button></a>
+			
+
+                </div>
+            </div>
+
+            <div class="secondHalf">
+                <img src="img/img.jpg" alt="Laptop Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="paras">
+        <p class="sectionTag text-big">Embark on a Journey of Lifelong Learning</p>
+        <p class="sectionSubTag text-small">Education is the key to personal and societal growth. LearnHub facilitates learning through diverse methods, from interactive courses to engaging discussions, ensuring a holistic educational experience for everyone. Uncover the limitless possibilities of knowledge exploration and empower yourself to thrive in a dynamic world, where continuous learning becomes a lifelong pursuit and a transformative force for personal and societal advancement. </p>
+        </div>
+        <div class="thumbnail">
+            <img src="C:\xampp\htdocs\javascriptProject\img\interaction.jpeg" alt="Classroom Interaction image" class="imgFluid">
+        </div>
+    </section>
+
+    <section class="section section-left" id="about">
+        <div class="paras">
+        <p class="sectionTag text-big">Revolutionizing Education in the Digital Age</p>
+        <p class="sectionSubTag text-small">LearnHub strives to make quality education accessible to all. We transcend geographical barriers, providing a platform where knowledge knows no bounds. Join us in reshaping the future of education. Join us in reshaping the future of education. Explore the innovative landscapes of virtual classrooms and collaborative learning, as we pave the way for an inclusive, digitally-driven educational revolution that empowers individuals on a global scale.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="C:\xampp\htdocs\javascriptProject\img\connectivity.jpeg" alt="Global connectivity image" class="imgFluid">
+        </div> 
+    </section>
+    <section class="section" id="services">
+        <div class="paras">
+        <p class="sectionTag text-big">Lets Grow Together</p>
+        <p class="sectionSubTag text-small">From ancient storytelling to modern online courses, education in India has evolved, and LearnHub embraces this journey. We foster a close community of Indian learners and educators where knowledge is shared, and growth is boundless. Our commitment is to create an inclusive space for collaborative learning, diverse perspectives, and the pursuit of knowledge within the Indian educational landscape.
+         </p>
+        </div>
+        <div class="thumbnail">
+            <img src="C:\xampp\htdocs\javascriptProject\img\education.jpeg" alt="Education image" class="imgFluid">
+        </div>
+    </section>
+     
+    <section class="contact" id="contact">
+        <h1 class="text-center">Get in Touch with LearnHub</h1>
+	<form>
+        <div class="form">
+            <input onfocus = "addInvalidClass(this)" onblur ="removeInvalidClass(this)" class="form-input" type="text" name="name" id="name" placeholder="Enter Your name">
+            <input onfocus = "addInvalidClass(this)" onblur ="removeInvalidClass(this)" class="form-input" type="text" name="phone" id="phone" placeholder="Enter Your Phone">
+            <input onfocus = "addInvalidClass(this)" onblur ="removeInvalidClass(this)" class="form-input" type="email" name="email" id="email" placeholder="Enter Your email">
+             <textarea onfocus = "this.classList.add('invalid')" onblur ="this.classList.remove('invalid')" class="form-input" name="text" id="text" cols="30" rows="10" placeholder="Ellaborate your concern"></textarea>
+            <input type="submit" name="subm" value="Submit" onclick="return confirmSubmission()" class="btn btn-sm btn-dark">
+        </div>
+	</form>
+    </section>
+
+    <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2024 - www.LearnHub.com - All rights reserved
+        </p>
+    </footer>
+ <script>
+        function addInvalidClass(element) {
+            element.classList.add('invalid');
+        }
+
+        function removeInvalidClass(element) {
+            element.classList.remove('invalid');
+        }
+    function confirmSubmission() {
+        // Ask for confirmation before submitting the form
+        var isConfirmed = confirm("Are you sure you want to submit the form?");
+        
+        if (isConfirmed) {
+            // If confirmed, return true to allow the form submission
+            return true;
+        } else {
+            // If not confirmed, return false to prevent the form submission
+            return false;
+        }
+    }
+    </script>
+      <script src="resp.js"></script>
+</body>

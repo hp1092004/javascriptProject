@@ -1,0 +1,9 @@
+    function subscribeToBlog() {
+        let userEmail = prompt("Subscribe to our blog! Enter your email address:");
+        if (userEmail !== null && userEmail !== "") {
+            alert("Thank you for subscribing to our blog! You will receive updates at " + userEmail);
+            // Add logic to store the email address or subscribe the user to the blog
+        } else {
+            alert("Please enter a valid email address to subscribe to our blog.");
+        }
+    }
