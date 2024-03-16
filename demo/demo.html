@@ -100,11 +100,6 @@
                 padding-bottom: 20px; /* Add some spacing at the bottom */
             }
             
-            .burger {
-                display: block; /* Display the burger menu icon */
-                margin-top: 10px; /* Add some spacing at the top */
-                align-self: flex-end; /* Position the menu button at the end when menu is not active */
-            }
 
             nav div {
                 display: none; /* Hide the navigation links by default */
@@ -118,21 +113,31 @@
                 width: 100%;
                 padding-left: 0; /* Remove default padding for list */
             }
-            
-            /* Hide the moon icon when the hamburger menu is present */
-            #moonIcon {
+
+            /* Show moon icon button when menu is active */
+            .moon {
                 display: none;
             }
-          
+
+            nav.active .moon {
+                display: block;
+                margin-top: 10px;
+                align-self: center;
+            }
+	    .burger {
+                display: block; /* Display the burger menu icon */
+                margin-top: 10px; /* Add some spacing at the top */
+                align-self: flex-end; /* Position the menu button at the end when menu is not active */
+            }
         }
 
-        /* Ensure moon icon maintains visibility in both light and dark modes */
-        #moonIcon, #moonIconActive {
-            background-color: transparent;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
+        /* Media query for screens with min-width: 669px */
+        @media only screen and (min-width: 669px) {
+            .moon {
+                display: block; /* Display the moon icon button */
+                align-self: flex-end; /* Position the moon icon button at the end */
+                margin-top: 10px; /* Add some spacing at the top */
+            }
         }
     </style>
 </head>
@@ -143,8 +148,8 @@
             <a href="#types">Types of Communication</a>
             <a href="#benefits">Benefits</a>
         </div>
-        <button id="toggleBtn" class="burger" onclick="toggleMenu()">☰</button> 
-        <button id="moonIcon" onclick="toggleMode()">☾</button> <!-- ☾ button -->
+	<button id="toggleBtn" class="moon" onclick="toggleMode()">☾</button>
+        <button id="toggleBtn" class="burger" onclick="toggleMenu()">☰</button>
     </nav>
 
     <h1>Communication Skills</h1>
@@ -181,20 +186,6 @@
         function toggleMenu() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('active'); // Toggle the 'active' class on the navigation menu
-            
-            const moonIcon = document.getElementById('moonIcon');
-            if (nav.classList.contains('active')) {
-                const moonButton = document.createElement('button');
-                moonButton.textContent = "☾";
-                moonButton.id = "moonIconActive";
-                moonButton.onclick = toggleMode;
-                nav.appendChild(moonButton);
-            } else {
-                const moonButtonActive = document.getElementById('moonIconActive');
-                if (moonButtonActive) {
-                    moonButtonActive.remove();
-                }
-            }
         }
         
         function toggleMode() {
@@ -209,6 +200,6 @@
         function showWelcomeMessage() {
             alert("Welcome to our Communication Skills Demo Website! Explore and enhance your communication skills.");
         }
-    </script>
+    </script>	
 </body>
 </html>
