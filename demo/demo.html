@@ -118,8 +118,21 @@
                 width: 100%;
                 padding-left: 0; /* Remove default padding for list */
             }
-
+            
+            /* Hide the moon icon when the hamburger menu is present */
+            #moonIcon {
+                display: none;
+            }
           
+        }
+
+        /* Ensure moon icon maintains visibility in both light and dark modes */
+        #moonIcon, #moonIconActive {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
         }
     </style>
 </head>
@@ -130,7 +143,8 @@
             <a href="#types">Types of Communication</a>
             <a href="#benefits">Benefits</a>
         </div>
-        <button id="toggleBtn" class="burger" onclick="toggleMenu()">☰</button> <!-- Change the burger menu icon to '☰' -->
+        <button id="toggleBtn" class="burger" onclick="toggleMenu()">☰</button> 
+        <button id="moonIcon" onclick="toggleMode()">☾</button> <!-- ☾ button -->
     </nav>
 
     <h1>Communication Skills</h1>
@@ -167,6 +181,20 @@
         function toggleMenu() {
             const nav = document.querySelector('nav');
             nav.classList.toggle('active'); // Toggle the 'active' class on the navigation menu
+            
+            const moonIcon = document.getElementById('moonIcon');
+            if (nav.classList.contains('active')) {
+                const moonButton = document.createElement('button');
+                moonButton.textContent = "☾";
+                moonButton.id = "moonIconActive";
+                moonButton.onclick = toggleMode;
+                nav.appendChild(moonButton);
+            } else {
+                const moonButtonActive = document.getElementById('moonIconActive');
+                if (moonButtonActive) {
+                    moonButtonActive.remove();
+                }
+            }
         }
         
         function toggleMode() {
